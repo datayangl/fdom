@@ -120,7 +120,7 @@ def iter_func(max_iter_count=100000):
         error1[0] = error2[0] + b * error1[0]
         error1[1] = error2[1] + b * error1[1]
 
-        f2 = func(pre_x[0], pre_x[1])
+        f2 = func(pre_xk[0], pre_xk[1])
         if abs(f2-f1) < precision and math.sqrt((pre_xk[0]-pre_x[0])**2+(pre_xk[1]-pre_x[1])**2) < precision and \
                 math.sqrt(cal_x_der(pre_xk[0], pre_xk[1])**2+cal_y_der(pre_xk[0], pre_xk[1])**2) < precision:
             # print("iter_count: ", iter_count, " px ", pre_x[0], " py ", pre_x[1])
